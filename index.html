@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="مشاتل بصمة إيما الزراعية - تنسيق حدائق بالرياض، عشب طبيعي وصناعي، نخيل، شلالات، مظلات وشبكات ري">
+  <title>مشاتل بصمة إيما الزراعية | تنسيق حدائق بالرياض</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'Almarai',Tahoma,sans-serif;color:#222;background:#f5f5f0;line-height:1.7;overflow-x:hidden}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .container{width:100%;max-width:1140px;margin:0 auto;padding:0 16px}
+
+    /* Top bar */
+    .topbar{background:#5c4a1f;color:#fff;font-size:14px;padding:8px 0}
+    .topbar .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+    .topbar a{color:#fff}
+    .topbar a:hover{color:#e8d48b}
+
+    /* Header */
+    .header{background:#fff;border-bottom:3px solid #2d6a3e;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+    .header .container{display:flex;align-items:center;justify-content:space-between;height:78px;gap:12px}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;color:#2d6a3e;white-space:nowrap}
+    .logo-box{width:52px;height:52px;background:#2d6a3e;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:26px;flex-shrink:0}
+    .nav{display:flex;align-items:center;gap:22px;list-style:none}
+    .nav a{font-weight:700;font-size:15px;color:#333;transition:color .2s}
+    .nav a:hover{color:#2d6a3e}
+    .btn-outline{display:inline-block;border:2px solid #5c4a1f;color:#5c4a1f;padding:8px 18px;border-radius:4px;font-weight:700;font-size:14px;transition:all .2s}
+    .btn-outline:hover{background:#5c4a1f;color:#fff}
+    .btn-green{display:inline-block;background:#2d6a3e;color:#fff;padding:10px 22px;border-radius:4px;font-weight:700;font-size:15px;transition:background .2s}
+    .btn-green:hover{background:#1f4d2c}
+    .btn-gold{display:inline-block;background:#5c4a1f;color:#fff;padding:10px 22px;border-radius:4px;font-weight:700;font-size:15px;transition:background .2s}
+    .btn-gold:hover{background:#463812}
+    .menu-btn{display:none;background:none;border:none;cursor:pointer;width:36px;height:36px;flex-direction:column;justify-content:center;gap:5px}
+    .menu-btn span{display:block;height:3px;background:#2d6a3e;border-radius:2px}
+
+    /* Hero */
+    .hero{position:relative;height:520px;background:#1a3a22 url('https://images.unsplash.com/photo-1585320806297-3695955c9e9a?w=1600&q=80') center/cover no-repeat}
+    .hero::after{content:'';position:absolute;inset:0;background:rgba(20,50,30,.55)}
+    .hero-inner{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#fff;padding:20px}
+    .hero-tag{background:rgba(0,0,0,.45);padding:6px 16px;border-radius:4px;font-size:14px;margin-bottom:14px}
+    .hero h1{background:#fff;color:#5c4a1f;font-size:clamp(28px,5vw,48px);font-weight:800;padding:12px 28px;margin-bottom:16px;line-height:1.3}
+    .hero p{background:rgba(45,106,62,.9);max-width:620px;padding:12px 20px;font-size:15px;margin-bottom:22px;line-height:1.8}
+    .hero .btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+
+    /* Sections */
+    section{padding:55px 0}
+    .sec-title{text-align:center;margin-bottom:36px}
+    .sec-title h2{font-size:28px;font-weight:800;color:#2d6a3e;margin-bottom:6px}
+    .sec-title p{color:#555;font-size:15px}
+
+    /* About */
+    .about-row{display:flex;gap:36px;align-items:center;flex-wrap:wrap}
+    .about-row .img-side{flex:1 1 320px;min-width:280px}
+    .about-row .img-side img{width:100%;height:340px;object-fit:cover;border:4px solid #2d6a3e}
+    .about-row .txt-side{flex:1 1 320px;min-width:280px}
+    .about-row .txt-side h2{font-size:24px;color:#2d6a3e;margin-bottom:12px;font-weight:800}
+    .about-row .txt-side p{color:#444;margin-bottom:12px;font-size:15px}
+    .badge-list{list-style:none;margin-top:16px}
+    .badge-list li{padding:6px 0;font-weight:700;font-size:14.5px;color:#333;border-bottom:1px dashed #ccc}
+    .badge-list li::before{content:'✓ ';color:#2d6a3e;font-weight:800}
+
+    /* Services */
+    .services-bg{background:#fff}
+    .svc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
+    .svc-card{background:#f8f8f4;border:1px solid #ddd;overflow:hidden;transition:box-shadow .2s}
+    .svc-card:hover{box-shadow:0 6px 18px rgba(0,0,0,.1)}
+    .svc-card img{width:100%;height:170px;object-fit:cover}
+    .svc-card .body{padding:14px 16px 18px}
+    .svc-card h3{font-size:16px;font-weight:800;color:#2d6a3e;margin-bottom:6px}
+    .svc-card p{font-size:13.5px;color:#555;line-height:1.6}
+
+    /* Features */
+    .feat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;text-align:center}
+    .feat-box{background:#fff;border:1px solid #ddd;padding:28px 18px}
+    .feat-box .ico{font-size:36px;margin-bottom:10px}
+    .feat-box h3{font-size:17px;font-weight:800;color:#2d6a3e;margin-bottom:6px}
+    .feat-box p{font-size:13.5px;color:#555}
+
+    /* Gallery */
+    .gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .gal-grid img{width:100%;height:220px;object-fit:cover;border:2px solid #ddd}
+
+    /* CTA */
+    .cta-strip{background:#2d6a3e;color:#fff;text-align:center;padding:40px 20px}
+    .cta-strip h2{font-size:24px;font-weight:800;margin-bottom:10px}
+    .cta-strip p{margin-bottom:18px;font-size:15px;opacity:.95}
+    .cta-strip .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .cta-strip .btn-white{background:#fff;color:#2d6a3e;padding:10px 24px;border-radius:4px;font-weight:700;font-size:15px}
+    .cta-strip .btn-white:hover{background:#e8f5eb}
+    .cta-strip .btn-wa{background:#25D366;color:#fff;padding:10px 24px;border-radius:4px;font-weight:700;font-size:15px}
+    .cta-strip .btn-wa:hover{background:#1da851}
+
+    /* Contact */
+    .contact-simple{background:#fff;text-align:center}
+    .contact-simple h2{color:#2d6a3e;font-size:26px;font-weight:800;margin-bottom:8px}
+    .contact-simple > p{color:#555;margin-bottom:28px}
+    .contact-boxes{display:flex;justify-content:center;gap:20px;flex-wrap:wrap}
+    .c-box{background:#f5f5f0;border:2px solid #2d6a3e;padding:24px 36px;min-width:220px;transition:background .2s}
+    .c-box:hover{background:#e8f0ea}
+    .c-box .ico{font-size:32px;margin-bottom:8px}
+    .c-box h3{font-size:16px;font-weight:800;color:#2d6a3e;margin-bottom:4px}
+    .c-box p{font-size:18px;font-weight:700;color:#333}
+
+    /* Footer */
+    .footer{background:#1a2e1c;color:rgba(255,255,255,.8);padding:40px 0 20px;font-size:14px}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px;margin-bottom:28px}
+    .footer h4{color:#fff;font-weight:800;margin-bottom:12px;font-size:16px}
+    .footer ul{list-style:none}
+    .footer ul li{margin-bottom:7px}
+    .footer ul a:hover{color:#e8d48b}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:16px;text-align:center;font-size:13px}
+
+    /* Floating */
+    .float-btns{position:fixed;bottom:20px;left:16px;z-index:99;display:flex;flex-direction:column;gap:10px}
+    .float-btns a{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;color:#fff;box-shadow:0 3px 12px rgba(0,0,0,.25);transition:transform .2s}
+    .float-btns a:hover{transform:scale(1.08)}
+    .float-btns .wa{background:#25D366}
+    .float-btns .call{background:#2d6a3e}
+
+    /* Responsive */
+    @media(max-width:900px){
+      .nav{display:none;position:absolute;top:78px;right:0;left:0;background:#fff;flex-direction:column;padding:12px 0;border-bottom:2px solid #2d6a3e;gap:0}
+      .nav.open{display:flex}
+      .nav li{width:100%;text-align:center;border-bottom:1px solid #eee}
+      .nav a{display:block;padding:12px}
+      .menu-btn{display:flex}
+      .header .btn-outline{display:none}
+      .feat-row{grid-template-columns:1fr}
+      .gal-grid{grid-template-columns:1fr 1fr}
+      .footer-grid{grid-template-columns:1fr}
+      .hero{height:440px}
+    }
+    @media(max-width:560px){
+      .gal-grid{grid-template-columns:1fr}
+      .hero h1{font-size:26px;padding:10px 16px}
+      .topbar{font-size:12px;text-align:center}
+      .topbar .container{justify-content:center}
+    }
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <a href="tel:+966569612781">📞 0569612781</a>
+    <span>📍 المملكة العربية السعودية، الرياض</span>
+  </div>
+</div>
+
+<header class="header">
+  <div class="container">
+    <a href="#home" class="logo">
+      <div class="logo-box">🌿</div>
+      <span>بصمة إيما الزراعية</span>
+    </a>
+    <ul class="nav" id="nav">
+      <li><a href="#home">الرئيسية</a></li>
+      <li><a href="#about">نبذة عنا</a></li>
+      <li><a href="#services">خدماتنا</a></li>
+      <li><a href="#gallery">أعمالنا</a></li>
+      <li><a href="#contact">تواصل معنا</a></li>
+    </ul>
+    <a href="tel:+966569612781" class="btn-outline">احصل على أفضل العروض</a>
+    <button class="menu-btn" id="menuBtn" aria-label="القائمة">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-tag">مرحباً بكم عملاءنا الكرام</div>
+    <h1>تنسيق حدائق الرياض</h1>
+    <p>مشاتل بصمة إيما الزراعية تقدم خدمات تنسيق الحدائق باحترافية وإبداع. نجمع بين الخبرة والابتكار لتحويل المساحات الخضراء إلى أماكن ساحرة ومستدامة.</p>
+    <div class="btns">
+      <a href="tel:+966569612781" class="btn-green">تواصل معنا</a>
+      <a href="https://wa.me/966569612781" target="_blank" rel="noopener" class="btn-gold">واتساب</a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="about-row">
+      <div class="img-side">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="حديقة فيلا منسقة">
+      </div>
+      <div class="txt-side">
+        <h2>مشاتل بصمة إيما الزراعية</h2>
+        <p>أفضل مؤسسة تنسيق حدائق الرياض تقدم خدمات تنسيق الحدائق بأفضل جودة وأقل تكاليف وأحدث تصميمات. نمتلك فريق عمل مدرب على أعلى مستوى لتنفيذ أصعب المشاريع وفي أسرع وقت.</p>
+        <p>نحن ملتزمون بتلبية احتياجات عملائنا وتحقيق رؤيتهم لحدائق مذهلة ومستدامة في الرياض والمناطق المحيطة.</p>
+        <ul class="badge-list">
+          <li>تنسيق حدائق الفلل والقصور والأسطح</li>
+          <li>تركيب العشب الطبيعي والصناعي</li>
+          <li>زراعة النخيل والأشجار والزهور</li>
+          <li>شلالات ونوافير ومظلات</li>
+          <li>شبكات ري عادية وأوتوماتيكية</li>
+        </ul>
+        <div style="margin-top:20px">
+          <a href="tel:+966569612781" class="btn-green">اتصل بنا</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#eef2ea;padding:40px 0">
+  <div class="container">
+    <div class="feat-row">
+      <div class="feat-box">
+        <div class="ico">🌱</div>
+        <h3>زراعة النباتات</h3>
+        <p>زراعة النجيل الطبيعي والنباتات والأشجار بأعلى جودة</p>
+      </div>
+      <div class="feat-box">
+        <div class="ico">🛠️</div>
+        <h3>صيانة الحديقة</h3>
+        <p>صيانة دورية للحديقة لضمان استمرار جمالها</p>
+      </div>
+      <div class="feat-box">
+        <div class="ico">✅</div>
+        <h3>ثقة وأمان</h3>
+        <p>التزام تام بالمواعيد وجودة التنفيذ</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services-bg" id="services">
+  <div class="container">
+    <div class="sec-title">
+      <h2>ما نقدمه لكم</h2>
+      <p>خدمات تنسيق الحدائق باحترافية وأسعار منافسة</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=600&q=80" alt="تنسيق حدائق">
+        <div class="body">
+          <h3>تنسيق الحدائق</h3>
+          <p>تصميم وتنفيذ حدائق الفلل والقصور والمنازل بأساليب حديثة تناسب البيئة السعودية.</p>
+        </div>
+      </div>
+      <div class="svc-card">
+        <img src="https://images.unsplash.com/photo-1592419044706-39796d40f98c?w=600&q=80" alt="ثيل طبيعي">
+        <div class="body">
+          <h3>العشب الطبيعي (الثيل)</h3>
+          <p>توريد وتركيب الثيل الطبيعي بأفضل الأنواع وأعلى جودة وأسعار مناسبة.</p>
+        </div>
+      </div>
+      <div class="svc-card">
+        <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&q=80" alt="عشب صناعي">
+        <div class="body">
+          <h3>العشب الصناعي</h3>
+          <p>توريد وتركيب العشب الصناعي بمختلف أنواعه وأشكاله بجودة عالية وسعر منافس.</p>
+        </div>
+      </div>
+      <div class="svc-card">
+        <img src="https://images.unsplash.com/photo-1463936575829-25148e1db1b8?w=600&q=80" alt="عشب جداري">
+        <div class="body">
+          <h3>العشب الجداري</h3>
+          <p>تركيب أحدث أشكال العشب الجداري للمساحات الداخلية والخارجية بأفضل الأسعار.</p>
+        </div>
+      </div>
+      <div class="svc-card">
+        <img src="https://images.unsplash.com/photo-1509423350716-97f9360b4e09?w=600&q=80" alt="نخيل">
+        <div class="body">
+          <h3>زراعة النخيل والأشجار</h3>
+          <p>توريد وتركيب جميع أنواع النخيل والأشجار والزهور المناسبة للمناخ.</p>
+        </div>
+      </div>
+      <div class="svc-card">
+        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80" alt="شلالات">
+        <div class="body">
+          <h3>الشلالات والنوافير</h3>
+          <p>تصميم وتركيب شلالات ونوافير منزلية تضيف لمسة عصرية وجمالية للحديقة.</p>
+        </div>
+      </div>
+      <div class="svc-card">
+        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80" alt="مظلات">
+        <div class="body">
+          <h3>المظلات والبرجولات</h3>
+          <p>تنفيذ مظلات الحدائق والسيارات بتصميمات جديدة وعصرية تناسب كل مساحة.</p>
+        </div>
+      </div>
+      <div class="svc-card">
+        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80" alt="شبكات ري">
+        <div class="body">
+          <h3>شبكات الري</h3>
+          <p>توريد وتركيب شبكات الري العادية والأوتوماتيكية بكفاءة عالية وأسعار مناسبة.</p>
+        </div>
+      </div>
+      <div class="svc-card">
+        <img src="https://images.unsplash.com/photo-1466692476866-aef56ad39f4b?w=600&q=80" alt="تنسيق أسطح">
+        <div class="body">
+          <h3>تنسيق حدائق الأسطح</h3>
+          <p>تنسيق حدائق الأسطح والفلل والقصور بطرق احترافية تحول المساحة لمكان مميز.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="container">
+    <div class="sec-title">
+      <h2>أعمالنا</h2>
+      <p>نماذج من مشاريع تنسيق الحدائق التي نفذناها</p>
+    </div>
+    <div class="gal-grid">
+      <img src="https://images.unsplash.com/photo-1585320806297-3695955c9e9a?w=700&q=80" alt="حديقة منسقة">
+      <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=700&q=80" alt="مساحة خضراء">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&q=80" alt="جلسة خارجية">
+      <img src="https://images.unsplash.com/photo-1509423350716-97f9360b4e09?w=700&q=80" alt="نخيل">
+      <img src="https://images.unsplash.com/photo-1592419044706-39796d40f98c?w=700&q=80" alt="ثيل">
+      <img src="https://images.unsplash.com/photo-1466692476866-aef56ad39f4b?w=700&q=80" alt="نباتات">
+    </div>
+  </div>
+</section>
+
+<div class="cta-strip">
+  <h2>هل تبحث عن تنسيق حدائق احترافي في الرياض؟</h2>
+  <p>تواصل معنا الآن واحصل على استشارة وعرض سعر مناسب</p>
+  <div class="btns">
+    <a href="tel:+966569612781" class="btn-white">📞 0569612781</a>
+    <a href="https://wa.me/966569612781" target="_blank" rel="noopener" class="btn-wa">💬 واتساب</a>
+  </div>
+</div>
+
+<section class="contact-simple" id="contact">
+  <div class="container">
+    <h2>تواصل معنا</h2>
+    <p>نحن في خدمتك — اتصل أو راسلنا على واتساب مباشرة</p>
+    <div class="contact-boxes">
+      <a href="tel:+966569612781" class="c-box">
+        <div class="ico">📞</div>
+        <h3>اتصال مباشر</h3>
+        <p>0569612781</p>
+      </a>
+      <a href="https://wa.me/966569612781" target="_blank" rel="noopener" class="c-box">
+        <div class="ico">💬</div>
+        <h3>واتساب</h3>
+        <p>راسلنا الآن</p>
+      </a>
+      <div class="c-box">
+        <div class="ico">📍</div>
+        <h3>الموقع</h3>
+        <p style="font-size:15px">الرياض، السعودية</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>مشاتل بصمة إيما الزراعية</h4>
+        <p style="margin-top:8px;max-width:320px">مؤسسة متخصصة في تنسيق الحدائق بالرياض. نقدم خدمات العشب الطبيعي والصناعي والنخيل والشلالات والمظلات وشبكات الري بأعلى جودة.</p>
+      </div>
+      <div>
+        <h4>روابط</h4>
+        <ul>
+          <li><a href="#home">الرئيسية</a></li>
+          <li><a href="#about">نبذة عنا</a></li>
+          <li><a href="#services">خدماتنا</a></li>
+          <li><a href="#gallery">أعمالنا</a></li>
+          <li><a href="#contact">تواصل معنا</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>للتواصل</h4>
+        <ul>
+          <li>📞 <a href="tel:+966569612781">0569612781</a></li>
+          <li>💬 <a href="https://wa.me/966569612781" target="_blank" rel="noopener">واتساب</a></li>
+          <li>📍 الرياض، المملكة العربية السعودية</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 مشاتل بصمة إيما الزراعية — جميع الحقوق محفوظة
+    </div>
+  </div>
+</footer>
+
+<div class="float-btns">
+  <a href="https://wa.me/966569612781" target="_blank" rel="noopener" class="wa" title="واتساب">💬</a>
+  <a href="tel:+966569612781" class="call" title="اتصال">📞</a>
+</div>
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const nav = document.getElementById('nav');
+  menuBtn.addEventListener('click', () => nav.classList.toggle('open'));
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+</script>
+</body>
+</html>
